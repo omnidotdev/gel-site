@@ -1,0 +1,60 @@
+import { ArrowRight, Github } from "lucide-react";
+import { SiArchlinux, SiRust } from "react-icons/si";
+
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import app from "@/lib/config/app.config";
+
+/**
+ * Hero section with title, tagline, and call-to-action buttons.
+ */
+const HeroSection = () => (
+  <section className="relative px-4 py-20 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl text-center">
+      <div className="mb-6 flex flex-wrap justify-center gap-2">
+        <Badge className="border-sky-500/20 bg-sky-500/10 text-sky-700 dark:text-sky-300">
+          <SiArchlinux className="mr-1 size-3" />
+          Built for Arch Linux
+        </Badge>
+        <Badge className="border-amber-500/20 bg-amber-500/10 text-amber-700 dark:text-amber-300">
+          <SiRust className="mr-1 size-3" />
+          Typed Rust config
+        </Badge>
+      </div>
+
+      <h1 className="mb-4 font-bold text-5xl tracking-tight sm:text-6xl lg:text-7xl">
+        <span className="text-sky-600 dark:text-sky-400">🧊 gel</span>
+      </h1>
+
+      <p className="mx-auto mb-6 max-w-2xl font-medium text-2xl text-foreground sm:text-3xl">
+        Your machine, set solid.
+      </p>
+
+      <p className="mx-auto mb-8 max-w-2xl text-base-600 text-lg dark:text-base-400">
+        Declarative whole-system management for Arch Linux, in typed Rust
+        config, without leaving Arch or learning Nix.
+      </p>
+
+      <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <Button
+          size="lg"
+          className="bg-sky-600 hover:bg-sky-700 dark:bg-sky-600 dark:hover:bg-sky-500"
+          onClick={() => window.open(app.links.github, "_blank")}
+        >
+          <Github className="mr-2 size-5" />
+          View on GitHub
+        </Button>
+        <Button
+          size="lg"
+          variant="outline"
+          onClick={() => window.open(app.links.docs, "_blank")}
+        >
+          Read the Docs
+          <ArrowRight className="ml-2 size-5" />
+        </Button>
+      </div>
+    </div>
+  </section>
+);
+
+export default HeroSection;

@@ -1,8 +1,20 @@
-# 🧊 gel site
+# 🧊 gel Site
 
-Marketing and documentation website for [gel](https://github.com/omnidotdev/gel), declarative whole-system management for Arch Linux.
+Marketing website for [gel](https://github.com/omnidotdev/gel), declarative whole-system management for Arch Linux in typed Rust config.
 
-Placeholder pending implementation.
+## Local Development
+
+Install dependencies:
+
+```sh
+bun i
+```
+
+Run dev server:
+
+```sh
+bun dev
+```
 
 ## License
 
