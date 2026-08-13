@@ -3,6 +3,8 @@
  */
 const app = {
   name: "gel",
+  // Catalog symbol mirrors the omni-api product catalog SSOT
+  icon: "🧊",
   tagline: "Your machine, set solid",
   description:
     "Declarative whole-system management for Arch Linux, in typed Rust config, without leaving Arch or learning Nix.",
@@ -18,6 +20,7 @@ const app = {
   organization: {
     name: "Omni",
     website: "https://omni.dev",
+    url: "https://omni.dev",
   },
   links: {
     docs: "https://docs.omni.dev/armory/gel",
