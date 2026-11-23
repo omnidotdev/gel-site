@@ -1,6 +1,5 @@
+import { Badge } from "@omnidotdev/thornberry/badge";
 import { Check } from "lucide-react";
-
-import { Badge } from "@/components/ui/badge";
 
 const points = [
   "Declarative: your machine is described in one place, not accumulated by hand",

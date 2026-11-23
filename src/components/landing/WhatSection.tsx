@@ -1,6 +1,10 @@
+import {
+  CardContent,
+  CardHeader,
+  CardRoot,
+  CardTitle,
+} from "@omnidotdev/thornberry/card";
 import { FileCode, GitCompareArrows, History, Import } from "lucide-react";
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const items = [
   {
@@ -43,18 +47,20 @@ const WhatSection = () => (
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => (
-          <Card
+          <CardRoot
             key={item.title}
             className="border-base-200/50 dark:border-base-800/50"
           >
             <CardHeader>
               <item.icon className="mb-2 size-8 text-sky-600 dark:text-sky-400" />
-              <CardTitle className="text-lg">{item.title}</CardTitle>
+              <CardTitle asChild>
+                <h3 className="text-lg">{item.title}</h3>
+              </CardTitle>
             </CardHeader>
             <CardContent className="text-base-600 text-sm dark:text-base-400">
               {item.description}
             </CardContent>
-          </Card>
+          </CardRoot>
         ))}
       </div>
     </div>
